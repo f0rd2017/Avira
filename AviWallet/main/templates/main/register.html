@@ -1,0 +1,41 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Зареєствуватись{% endblock %}
+
+{% block style %}{% static 'main/css/register.css' %}{% endblock %}
+
+{% block content %}
+
+
+<div id="register">
+    <form id="form" method="post">
+
+
+
+
+
+        <p class="row" style="border-bottom: solid 3px #73777B;">Зареєствуватись</p>
+        {% csrf_token %}
+        <div class="ui input">
+        {{ form.name }}
+        </div>
+        <div class="ui input">
+        {{ form.email }}
+        </div>
+        <div class="ui input">
+        {{ form.password }}
+        </div>
+        <div class="ui input">
+        {{ form.password }}
+        </div>
+
+        <div id="captcha" class="g-recaptcha" data-sitekey="6LdY-DIgAAAAAFaQJYDlRzFu1ig3BOsCVAqFh6vL" data-theme="dark"></div>
+        <h2 style="margin-right:auto;margin-left:auto;">{{ error }}</h2>
+        <button class="ui primary button" type="submit">
+          Зареєствуватись
+        </button>
+
+    </form>
+</div>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

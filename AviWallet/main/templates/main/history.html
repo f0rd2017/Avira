@@ -1,0 +1,25 @@
+{% extends 'main/profile.html' %}
+{% load static %}
+
+{% block contentWallet %}
+
+    {% csrf_token %}
+<div id="history">
+    <table class="ui selectable inverted table">
+        <thead style="font-size:2.4vh">
+        <tr>
+          <th>Адреса</th>
+          <th>Статус</th>
+          <th class="right aligned">Кількість токенів</th>
+        </tr>
+        </thead>
+        <tbody style="font-size:2.4vh">
+        <tr>
+          <td>0x3863197cbae5667d66886d7057a870da79816376</td>
+          <td>Підтверджено</td>
+          <td class="right aligned">12 Avira</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

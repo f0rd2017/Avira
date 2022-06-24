@@ -1,0 +1,26 @@
+{% extends 'main/profile.html' %}
+{% load static %}
+
+{% block contentWallet %}
+
+    {% csrf_token %}
+<form id="transactoin" method="post">
+    <h2 style="font-size:40px;display:flex;align-items: center;justify-content: center;margin-right:auto;margin-left:auto;margin-bottom:50px;"><i class="sync icon"></i>  Переказ  <i class="sync icon"></i></h2>
+    <div class="contentTransactoin">
+        <select class="ui dropdown" name="SelectToken">
+            <option value="Avira">Avira</option>
+            <option value="USDT">USDT</option>
+        </select>
+        <div class="ui input">
+            <input type="text" placeholder="Гаманець отримувача" id="Inputwallet" name="Inputwallet">
+        </div>
+        <div class="ui input">
+            <input type="text" placeholder="Кількість токенів" id="Inputcount" name="Inputcount">
+        </div>
+        <h2 style="margin-right:auto;margin-left:auto;">{{ error }}</h2>
+        <button class="ui primary button" type="submit">
+          Перевести
+        </button>
+    </div>
+</form>
+{% endblock %}

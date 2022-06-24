@@ -1,0 +1,140 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Про нас{% endblock %}
+
+{% block style %}{% static 'main/css/about.css' %}{% endblock %}
+
+
+{% block content %}
+    <div id="about">
+        <!--<div class="block">
+            <div class="content-text ">
+                <h1 class="border">Avira</h1>
+                <br>
+                <p><span class="border">Avira</span> - це криптовалюта яка дозволить допомогти українській армії. За рахунок комісій, які відправляются на допомогу армії.</p>
+                <p>Це сугубо український проект, за для допомоги нашій армії.</p>
+                <p>Кожна транзакція, має комісію яка знімаєтся з криптовалюти "Tron", вся сумма комісій збережується і відправляється армії на допомогу.</p>
+                <p>Проводьте транзакції на гаманці проекту за для допомоги українській армії.</p>
+            </div>
+
+        </div>-->
+
+        <div class="block">
+            <div class="content-text">
+                <h1 class="border">Криптовалюта</h1>
+                <br>
+                <div class="bloks_info conteiner">
+                    <div class="">
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h2>Криптовалюти</h2>
+                                    <span>Це децентралізовані цифрові гроші, які призначені для використання через Інтернет. Вони не випускаються і не контролюються жодним урядом чи іншим центральним органом влади. Кожна криптовалюта має свою ціну.</span>
+
+                            </div>
+                            <!--<span class="block-button"><a  href="{% url 'create' %}">Реєстрація</a></span>-->
+                            <div class="block-line"></div>
+                        </div>
+
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1>Зберігання</h1>
+                                    <span>Криптовалюти зберігаються на гаманці. Цей проект має свій гаманець і підтримує такі криптовалюти (Avira, USDT, Tron)</span>
+
+                            </div>
+
+                            <div class="block-line"></div>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1>Що таке Avira?</h1>
+                                    <span>У світі дуже багато різноманітних криптовалют, одна з них Avira - криптовалюта цього проекту. Цю криптовалюту можна добувати, за рахунок майнінгу (дивіться нижче).</span>
+
+                            </div>
+
+                            <div class="block-line"></div>
+                        </div>
+
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1>Майнінг</h1>
+                                    <span>Одним зі способів отримання криптовалюти є майнінг - дозволяє добувати криптовалюту завдяки вашому комп'ютеру, ви отримуєте винагороду за формування нових блоків. </span>
+
+                            </div>
+                            <span class="block-button"><a  href="{% url 'miner' %}">Більше</a></span>
+                            <div class="block-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-text ">
+                <h1 class="border">Гаманець "Avira"</h1>
+                <br>
+                <div class="bloks_info conteiner">
+                    <div class="">
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h2>Для початку</h2>
+                                    <span>Щоб користуватися гаманцем "Avira" вам потрібно створити акаунт. Після чого зайти у профіль де і буде ваш особистий гаманець.</span>
+
+                            </div>
+                            <span class="block-button"><a  href="{% url 'create' %}">Реєстрація</a></span>
+                            <div class="block-line"></div>
+                        </div>
+
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1>Баланс</h1>
+                                    <span>Гаманець підтримує такі криптовалюти (Avira, USDT, Tron). Є декілька способів отримати криптовалюту (Майнінг та виконання завдань). </span>
+
+                            </div>
+                            <span class="block-button"><a  href="#">Детальніше</a></span>
+                            <div class="block-line"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1>Avira на гаманці</h1>
+                                    <span>Avira - це криптовалюта проекту, яка має ціну, що постійно змінюється, що залежить від кількості криптовалюти, яка знаходиться у користувачів </span>
+
+                            </div>
+
+                            <div class="block-line"></div>
+                        </div>
+
+                        <div class="content-block">
+                            <div class="block-conteiner"></div>
+
+                            <div class="block-content">
+                                <h1></h1>
+                                    <span></span>
+
+                            </div>
+                            <span class="block-button"><a  href="#"></a></span>
+                            <div class="block-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

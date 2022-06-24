@@ -1,0 +1,36 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Авторизация{% endblock %}
+
+{% block style %}{% static 'main/css/login.css' %}{% endblock %}
+
+{% block content %}
+
+
+<div id="login">
+    <form method="post" id="form">
+
+
+        <p class="row" style="border-bottom: solid 3px #73777B;">Увійти</p>
+        {% csrf_token %}
+        <div class="ui input">
+
+            {{ form.email }}
+        </div>
+        <div class="ui input">
+            {{ form.password }}
+        </div>
+
+        <div id="captcha" class="g-recaptcha" data-sitekey="6LdY-DIgAAAAAFaQJYDlRzFu1ig3BOsCVAqFh6vL" data-theme="dark"></div>
+        <h2 style="margin-right:auto;margin-left:auto;">{{ error }}</h2>
+        <button class="ui primary button" type="submit">
+          Увійти
+        </button>
+
+    </form>
+</div>
+
+\
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

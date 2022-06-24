@@ -1,0 +1,19 @@
+#community{
+
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    color:#F9F2ED;
+}
+#community img{
+    height:200px;
+
+    border-radius:50%;
+    border: dashed 5px ;
+}
+
+#community pre {
+    font-size:21px;
+}

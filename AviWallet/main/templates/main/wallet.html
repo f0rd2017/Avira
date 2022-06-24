@@ -1,0 +1,32 @@
+{% extends 'main/profile.html' %}
+{% load static %}
+
+{% block contentWallet %}
+
+    {% csrf_token %}
+<div id="wallet">
+<p class="row"><i class="ethereum icon"></i> Гаманець <i class="ethereum icon"></i></p>
+<div class="content">
+    <div>
+        <h1>Паливо</h1>
+        <h2 style="margin-right:auto;margin-left:auto;"> TRON: {{ Tron }} </h2>
+    </div>
+    <div>
+        <h1>Баланс</h1>
+
+        <h2 style="margin-right:auto;margin-left:auto;"> Avira: <span id="cryptoSelect">{{ Avira }}</span></h2>
+        <h2 style="margin-right:auto;margin-left:auto;"> USDT: <span >{{ USDT }}</span></h2>
+        <h1>Ваша адреса</h1>
+        <br>
+        <a class="copyWallet" href="#" onclick="navigator.clipboard.writeText('{{ wallet }}')">
+            <h3>{{ wallet_short }}<i class="copy icon"></i></h3>
+        </a>
+
+    </div>
+    <div>
+        <h1>Сумма в долларах</h1>
+        <h2 style="margin-right:auto;margin-left:auto;">Баланс: {{ USD }}$</h2>
+    </div>
+</div>
+</div>
+{% endblock %}

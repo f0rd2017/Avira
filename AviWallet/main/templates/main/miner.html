@@ -1,0 +1,50 @@
+{% extends 'main/profile.html' %}
+{% load static %}
+
+{% block title %}Майнер{% endblock %}
+
+{% block style %}{% static 'main/css/miner.css' %}{% endblock %}
+
+{% block content %}
+
+<div class="miner">
+
+    <h1 class="row">Майнер Avira</h1>
+
+    <div class="block">
+        <div class="conteiner">
+            <div class="content-block">
+                <div class="block-conteiner"></div>
+
+                <div class="block-content">
+                    <h1>Призначення</h1>
+                        <span>Дозволяє добувати криптовалюту завдяки вашому комп'ютеру, ви отримуєте винагороду за формування нових блоків.</span>
+
+                </div>
+
+                <div class="block-line"></div>
+            </div>
+
+            <div class="content-block">
+                <div class="block-conteiner"></div>
+
+                <div class="block-content">
+                    <h1>Завантажити</h1>
+                        <span>Щоб завантажити майнер, натисніть на кнопку нажче, та запустіть майнер.</span>
+
+                </div>
+                <span class="block-button"><a  href="static/main/files/miner.rar" download>Завантажити</a></span>
+
+                <div class="block-line"></div>
+            </div>
+        </div>
+        <div class="conteiner">
+            <div class="content-text">
+                <h1>Користування</h1>
+                <br>
+                <p>Щоб почати роботу з майнером, потрібно завантажити майнер, запустити, після чого увійти в аккаунт. Натиснути на кнопку "Запустити майнер". Готово! Тепер ви можете добувати криптовалюту "Avira".</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

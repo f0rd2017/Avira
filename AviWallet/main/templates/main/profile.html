@@ -1,0 +1,98 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Профіль{% endblock %}
+
+{% block style %}{% static 'main/css/profile.css' %}{% endblock %}
+{% block script %}{% static 'main/js/profile.js' %}{% endblock %}
+
+{% block content %}
+    {% csrf_token %}
+    <input type="hidden" id="ProfilePage" value="{{ page }}" style="position:absolute" readonly>
+
+    <div id="profile" onload="funonload();">
+        <div id="profileBlock">
+            <div id="profilesUpChoice">
+                <ul>
+                    <a href="#" class="wallet"><li><i class="ethereum icon"></i> Гаманець <i class="ethereum icon"></i></li></a>
+                    <a href="#" class="history"><li>Транзакції <i class="file alternate outline icon"></i></li></a>
+                    <a href="#" class="transactoin"><li>Переказ <i class="sync icon"></i></li></a>
+                </ul>
+            </div>
+
+            <div id="profilesDownContent">
+                <div id="wallet">
+                    <p class="row"><i class="ethereum icon"></i> Гаманець <i class="ethereum icon"></i></p>
+                    <div class="content">
+                        <div>
+                            <h1>Паливо</h1>
+                            <h2 style="margin-right:auto;margin-left:auto;"> TRON: {{ Tron }} </h2>
+                        </div>
+                        <div>
+                            <h1>Баланс</h1>
+
+
+                            <h2 style="margin-right:auto;margin-left:auto;"> Avira: <span id="cryptoSelect">{{ Avira }}</span></h2>
+                            <h2 style="margin-right:auto;margin-left:auto;"> USDT: <span >{{ USDT }}</span></h2>
+                            <h1>Ваша адреса</h1>
+                            <br>
+                            <a class="copyWallet" href="#" onclick="navigator.clipboard.writeText('{{ wallet }}')">
+                                <h3>{{ wallet_short }}<i class="copy icon"></i></h3>
+                            </a>
+
+                        </div>
+                        <div>
+                            <h1>Сумма в долларах</h1>
+                            <h2 style="margin-right:auto;margin-left:auto;">Баланс: {{ USD }}$</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="history">
+                    <table class="ui selectable inverted table">
+                        <thead style="font-size:2.4vh">
+                        <tr>
+                          <th>Адреса</th>
+                          <th>Час виконання</th>
+                          <th class="right aligned">Кількість токенів</th>
+                        </tr>
+
+                        </thead>
+                        <tbody style="font-size:2.2vh">
+                            {% for el in history %}
+                                <tr>
+                                  <td>{{ el.wallet }}</td>
+                                  <td>{{ el.DateTime }}</td>
+                                  <td class="right aligned">{{ el.count }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <form id="transactoin" method="post">
+                    {% csrf_token %}
+                    <h2 style="font-size:40px;display:flex;align-items: center;justify-content: center;margin-right:auto;margin-left:auto;margin-bottom:50px;"><i class="sync icon"></i>  Переказ  <i class="sync icon"></i></h2>
+                    <div class="contentTransactoin">
+                        <select class="ui dropdown" name="SelectToken">
+                            <option value="Avira">Avira</option>
+                            <option value="USDT">USDT</option>
+                            <option value="Tron">Tron</option>
+                        </select>
+                        <div class="ui input">
+                            <input type="text" placeholder="Гаманець отримувача" id="Inputwallet" name="Inputwallet">
+                        </div>
+                        <div class="ui input">
+                            <input type="text" placeholder="Кількість токенів" id="Inputcount" name="Inputcount">
+                        </div>
+                        <h2 style="margin-right:auto;margin-left:auto;">{{ error }}</h2>
+                        <button class="ui primary button" type="submit">
+                          Перевести
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

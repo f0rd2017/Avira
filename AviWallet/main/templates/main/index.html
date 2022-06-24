@@ -1,0 +1,84 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Головна сторінка{% endblock %}
+
+{% block content %}
+<div id="Upper">
+    <video autoplay="autoplay" loop="true" muted>
+        <source src="{% static 'main/video/general.mp4' %}">
+    </video>
+    <div id="Logo">
+        <p style="margin-bottom:0;">Створюйте свій метавсесвіт разом зі своєю спільнотою</p>
+        <h1>Avira</h1>
+        <p style="color:#78fff1">Avira - це криптовалюта здатна підкорити світ!</p>
+        <div id="icons">
+            <a href="https://discord.gg/4vwR76ae" target="_blank"><i class="discord icon"></i></a>
+        </div>
+    </div>
+</div>
+
+<p class="row">Криптовалюта</p>
+
+<div id="Crypto" class="generalblock">
+
+    <div class="conteiners">
+        <div class="content-block">
+            <div class="block-conteiner"></div>
+
+            <div class="block-content">
+                <h1>Дізнатися більше</h1>
+                    <span>Більше про проект і його можливоті, можна дізнатися, натиснувши, кнопку нижче. Користування гаманцем. Майнинг. Робота з сайтом.</span>
+
+            </div>
+            <span class="block-button"><a  href="{% url 'about' %}">Більше!</a></span>
+            <div class="block-line"></div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-conteiner"></div>
+
+            <div class="block-content">
+                <h1>Перший крок</h1>
+                    <span>Щоб користуватися усіма можливостями нашого проекту вам потрібно створити акаунт.</span>
+
+            </div>
+            <span class="block-button"><a  href="{% url 'create' %}">Реєстрація</a></span>
+            <div class="block-line"></div>
+        </div>
+
+        <div class="content-block">
+            <div class="block-conteiner"></div>
+
+            <div class="block-content">
+                <h1>Майнер</h1>
+                    <span>Майнер - дозволяє добувати криптовалюту завдяки вашому комп'ютеру, ви отримуєте винагороду за формування нових блоків, потрібних для формування криптовалюти Avira.</span>
+
+            </div>
+            <span class="block-button"><a  href="{% url 'miner' %}">Завантажити</a></span>
+            <div class="block-line"></div>
+        </div>
+    </div>
+
+
+
+    <div class="content-text">
+        <h1>Avira</h1>
+        <br>
+        <p>Avira - це криптовалюта майбутнього яка дозволить проводити транзакції дуже швидко та з мінімальною комісією.</p>
+    </div>
+</div>
+
+<p class="row">Підтримка</p>
+
+<div id="Support" class="generalblock">
+    <div class="content-text">
+        <h1>Support</h1>
+        <br>
+        <p>Всі питання можна задати нам у Discord. Відповідь можно отримати як від учасників так і від адміністрації. Для додаткової інформації також можно використати Discord</p>
+    </div>
+    <img src="{% static 'main/img/support.png' %}">
+
+</div>
+
+
+{% endblock %}

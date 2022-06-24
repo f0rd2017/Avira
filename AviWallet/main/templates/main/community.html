@@ -1,0 +1,23 @@
+{% extends 'main/main.html' %}
+{% load static %}
+{% block title %}Спільнота{% endblock %}
+
+{% block style %}{% static 'main/css/community.css' %}{% endblock %}
+
+{% block content %}
+
+    <div id="community">
+        <p class="row">Розробник проекту</p>
+
+        <img src="{% static 'main/img/community_avatar.jpg' %}">
+        <h1><a href="https://www.instagram.com/spir1t_zombie/" target="_blank">Касаткін Станіслав</a></h1>
+        <pre>
+Розробив данний проект, який має назву "Avira" - Касаткін Станіслав.
+
+  Junior front-end розробник, який взяв ініціативу створити проект.
+
+    Який принесе у світ трохи бильше різноманітних можливостей
+            </pre>
+
+    </div>
+{% endblock %}
